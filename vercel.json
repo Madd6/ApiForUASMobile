@@ -2,7 +2,7 @@
     "version": 2,
     "framework": null,
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.1" }
+        "api/index.php": { "runtime": "vercel-php@0.7.1" }
     },
     "routes": [
         { "src": "/build/(.*)", "dest": "/public/build/" },
@@ -14,8 +14,8 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "https://yourproductionurl.com",
-        "APP_KEY": "base64:TGaVaXwhWgjn9akhE4SCSIjGG/cQqvICUQ+PgLA3Bs0=",
+        "APP_URL": "//api-mobile-acplzbnf1-muhammad-abdul-wahids-projects.vercel.app",
+        "APP_KEY": "base64:GZ+Fj2eU5CNojhW+wdrmzyspLOFkCn2RSqrcqgun3V0=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
