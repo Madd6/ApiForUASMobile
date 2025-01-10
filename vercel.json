@@ -1,20 +1,27 @@
 {
-     "version": 2,
+    "version": 2,
     "framework": null,
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.1" }
+        "api/index.php": { "runtime": "vercel-php@0.7.1" }
     },
     "github": {
         "enabled": false
     },
     "routes": [{
+        "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|svg|ico|ttf|woff|woff2|eot|otf|webp|avif|txt))$",
+        "dest": "/public/$1"
+    },
+    {
         "src": "/(.*)",
         "dest": "/api/index.php"
     }],
+    "public": true,
+    "buildCommand": "vite build",
+    "outputDirectory": "public",
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "//api-mobile-acplzbnf1-muhammad-abdul-wahids-projects.vercel.app",
+        "APP_URL": "//api-for-uas-mobile.vercel.app",
         "APP_KEY": "base64:GZ+Fj2eU5CNojhW+wdrmzyspLOFkCn2RSqrcqgun3V0=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
