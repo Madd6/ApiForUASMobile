@@ -8,4 +8,6 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::resource('/carts', CartsController::class);
+Route::get('/carts', function () {
+    return response()->json(['message' => 'Carts endpoint working']);
+});
