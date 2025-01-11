@@ -2,7 +2,11 @@
     "version": 2,
     "framework": null,
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.7.1" }
+        "api/index.php": { 
+            "runtime": "vercel-php@0.7.1",
+            "memory": 1024,
+            "maxDuration": 60
+        }
     },
     "github": {
         "enabled": false
@@ -20,7 +24,7 @@
     "outputDirectory": "public",
     "env": {
         "APP_ENV": "production",
-        "APP_DEBUG": "false",
+        "APP_DEBUG": "true",
         "APP_URL": "//api-for-uas-mobile.vercel.app",
         "APP_KEY": "base64:GZ+Fj2eU5CNojhW+wdrmzyspLOFkCn2RSqrcqgun3V0=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
@@ -32,9 +36,9 @@
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie",
-
-        "PHP_EXTENSIONS": "pdo_pgsql,pgsql,curl",
-        "PHP_MEMORY_LIMIT": "256M",
-        "PHP_MAX_EXECUTION_TIME": "30"
+        "LOG_LEVEL": "debug",
+        
+        "DB_CONNECTION": "pgsql",
+        "POSTGRES_SSL": "true"
     }
 }
