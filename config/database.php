@@ -93,8 +93,9 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
-            'search_path' => 'public',
-            'sslmode' => env('POSTGRES_SSL', true) ? 'require' : 'prefer',
+            'schema' => 'public',
+            'sslmode' => 'require',
+            // 'sslmode' => 'prefer',
             'options' => [
                 PDO::ATTR_PERSISTENT => false,
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
